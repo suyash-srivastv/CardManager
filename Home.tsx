@@ -2,12 +2,14 @@ import React from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import CardHeader from './components/CardHeader';
 import IconButtons from './components/IconButtons';
+import CardStack from './components/CardStack';
 
 
 
 
 
 const HomeScreen = () => {
+
     return (
         <>
             <CardHeader />
@@ -15,7 +17,7 @@ const HomeScreen = () => {
                 style={styles.bottom}
             >
                 <IconButtons />
-
+                <CardStack />
             </View>
         </>
 
