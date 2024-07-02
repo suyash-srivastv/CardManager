@@ -13,9 +13,10 @@ https://github.com/suyash-srivastv/CardManager/assets/55198615/3a7a828f-06d0-45e
 
 
 ```bash
-#First install the dependencies
+# First install the dependencies
 yarn install or npm i
-# using npx
+
+# Run the appp in android
 npx react-native run-android
 ```
 
