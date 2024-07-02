@@ -1,8 +1,19 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import HomeScreen from './Home'
-
+import BootSplash from "react-native-bootsplash";
 const App = () => {
+
+
+
+  useEffect(() => {
+    const init = async () => {
+      await BootSplash.hide({ fade: true });
+
+    };
+    init()
+  }, [])
+
   return (
     <HomeScreen />
   )
