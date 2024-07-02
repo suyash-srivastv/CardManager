@@ -14,7 +14,7 @@ https://github.com/suyash-srivastv/CardManager/assets/55198615/3a7a828f-06d0-45e
 
 ```bash
 #First install the dependencies
-Yarn install or npm i
+yarn install or npm i
 # using npx
 npx react-native run-android
 ```
