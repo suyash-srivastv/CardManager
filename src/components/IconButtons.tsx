@@ -4,12 +4,12 @@ const IconButtons = () => {
     return (
         <View
             style={styles.container}>
-            <Image source={require('../assets/fingerprint.png')} style={styles.icons} />
-            <Image source={require('../assets/flight.png')} style={styles.icons} />
-            <Image source={require('../assets/water.png')} style={styles.icons} />
-            <Image source={require('../assets/health.png')} style={styles.icons} />
-            <Image source={require('../assets/history.png')} style={styles.icons} />
-            <Image source={require('../assets/card_membership.png')} style={styles.icons} />
+            <Image source={require('../../assets/fingerprint.png')} style={styles.icons} />
+            <Image source={require('../../assets/flight.png')} style={styles.icons} />
+            <Image source={require('../../assets/water.png')} style={styles.icons} />
+            <Image source={require('../../assets/health.png')} style={styles.icons} />
+            <Image source={require('../../assets/history.png')} style={styles.icons} />
+            <Image source={require('../../assets/card_membership.png')} style={styles.icons} />
         </View>
     )
 }

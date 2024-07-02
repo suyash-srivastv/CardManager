@@ -1,37 +1,33 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
-import CardHeader from './components/CardHeader';
-import IconButtons from './components/IconButtons';
-import CardStack from './components/CardStack';
+import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native'
+import React from 'react'
 
-
-
-
-
-const HomeScreen = () => {
-
+const CardHeader = () => {
     return (
-        <>
-            <CardHeader />
-            <View
-                style={styles.bottom}
-            >
-                <IconButtons />
-                <CardStack />
-            </View>
-        </>
+        <View style={styles.container}>
+            <View style={styles.header}>
+                <Image source={require('../../assets/sun.png')} style={styles.cardImage} />
+                <TouchableOpacity style={styles.btn} >
+                    <Image source={require('../../assets/light.png')} style={styles.light} />
+                    <Text style={{ color: 'white' }}>
+                        Tips
+                    </Text>
+                </TouchableOpacity>
 
-    );
-};
+            </View>
+            <View style={{ justifyContent: 'flex-start', alignContent: 'flex-start', alignItems: "flex-start" }}>
+                <Text style={styles.title}>All your credit cards</Text>
+                <Text style={styles.subtitle}>Find all your credit cards here</Text>
+            </View>
+
+        </View>
+    )
+}
 
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#000',
         padding: 20,
         paddingVertical: 30
-    },
-    bottom: {
-        backgroundColor: "#252525", flex: 1
     },
     btn: {
         justifyContent: 'space-around',
@@ -49,10 +45,6 @@ const styles = StyleSheet.create({
     light: {
         height: 22,
         width: 12
-    },
-    icons: {
-        height: 34,
-        width: 34
     },
     header: {
         flexDirection: 'row',
@@ -78,4 +70,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default HomeScreen;
+export default CardHeader

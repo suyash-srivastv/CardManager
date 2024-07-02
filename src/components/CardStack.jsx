@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { View, Animated, PanResponder, StyleSheet, Image, Dimensions } from 'react-native';
 
-// Import the images
 const images = [
-  require('../assets/card1.png'),
-  require('../assets/card2.png'),
-  require('../assets/card3.png'),
-  require('../assets/card4.png'),
+  require('../../assets/card1.png'),
+  require('../../assets/card2.png'),
+  require('../../assets/card3.png'),
+  require('../../assets/card4.png'),
 ];
 const { width } = Dimensions.get('window');
 
