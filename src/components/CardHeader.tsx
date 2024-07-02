@@ -8,7 +8,7 @@ const CardHeader = () => {
                 <Image source={require('../../assets/sun.png')} style={styles.cardImage} />
                 <TouchableOpacity style={styles.btn} >
                     <Image source={require('../../assets/light.png')} style={styles.light} />
-                    <Text style={{ color: 'white' }}>
+                    <Text style={styles.subtext}>
                         Tips
                     </Text>
                 </TouchableOpacity>
@@ -56,18 +56,21 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         borderRadius: 20,
-        // backgroundColor: 'linear-gradient(45deg, rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 1) 50%, rgba(255, 255, 0, 1) 100%)', // Gradient
     },
     title: {
+        fontFamily: 'Helvetica-Medium',
         color: 'white',
-        fontSize: 24,
+        fontSize: 37,
         fontWeight: 'bold',
         marginVertical: 10,
+
     },
     subtitle: {
         color: 'white',
-        fontSize: 16,
+        fontSize: 21,
+        fontFamily: 'Helvetica-Medium'
     },
+    subtext: { color: 'white', fontSize: 22, fontFamily: 'Roboto' }
 });
 
 export default CardHeader

@@ -13,12 +13,11 @@ class CardStack extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cardsPan: new Animated.ValueXY(), // To track the current position of the card
-      cardsStackedAnim: new Animated.Value(0), // For animating the stacked effect
-      currentIndex: 0, // To track the index of the current card
+      cardsPan: new Animated.ValueXY(),
+      cardsStackedAnim: new Animated.Value(0),
+      currentIndex: 0,
     };
 
-    // Create PanResponder for handling gestures
     this.cardsPanResponder = PanResponder.create({
       onStartShouldSetPanResponder: () => true,
       onStartShouldSetPanResponderCapture: () => true,
@@ -28,18 +27,15 @@ class CardStack extends Component {
         this.state.cardsPan.setValue({ x: gestureState.dx, y: this.state.cardsPan.y });
       },
       onPanResponderRelease: (event, gestureState) => {
-        // Reset card position
         Animated.timing(this.state.cardsPan, {
           toValue: 0,
           duration: 300,
         }).start();
 
-        // Animate the stacked cards effect
         Animated.timing(this.state.cardsStackedAnim, {
           toValue: 1,
           duration: 300,
         }).start(() => {
-          // Reset the animation value and update the current index
           this.state.cardsStackedAnim.setValue(0);
           this.setState({
             currentIndex: this.state.currentIndex + 1,
@@ -52,7 +48,6 @@ class CardStack extends Component {
   render() {
     return (
       <View style={styles.container}>
-        {/* Render the third card */}
         <Animated.View
           style={{
             ...styles.card,
@@ -77,8 +72,6 @@ class CardStack extends Component {
         >
           <Image source={images[(this.state.currentIndex + 2) % images.length]} style={styles.image} />
         </Animated.View>
-
-        {/* Render the second card */}
         <Animated.View
           style={{
             ...styles.card,
@@ -104,7 +97,6 @@ class CardStack extends Component {
           <Image source={images[(this.state.currentIndex + 1) % images.length]} style={styles.image} />
         </Animated.View>
 
-        {/* Render the first card */}
         <Animated.View
           {...this.cardsPanResponder.panHandlers}
           style={{
