@@ -16,7 +16,7 @@ https://github.com/suyash-srivastv/CardManager/assets/55198615/3a7a828f-06d0-45e
 # First install the dependencies
 yarn install or npm i
 
-# Run the appp in android
+# Run the app in android
 npx react-native run-android
 ```
 
