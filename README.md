@@ -22,6 +22,6 @@ npx react-native run-android
 
 ## APK
 Drive link - https://drive.google.com/file/d/1zRZgqTFWlnGNFU2cEVoZhv2q9yKKk6g7/view?usp=drivesdk
-apk file also present in root directory of the app named app-release.apk
+/ apk file also present in root directory of the repository named app-release.apk
 
 
